@@ -1,17 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Image Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💖</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #fff1f5, #fdecef);
+  text-align:center;
+  color:#333;
+}
+
+.section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+
+.card{
+  background:white;
+  width:100%;
+  max-width:520px;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+h1{ font-size:2.2rem; }
+h2{ margin-bottom:10px; }
+
+p{
+  font-size:1rem;
+  line-height:1.6;
+}
+
+.button{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 26px;
+  background:#ff7aa2;
+  color:white;
+  border-radius:25px;
+  text-decoration:none;
+}
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:12px;
+  margin-top:15px;
+}
+
+.photo-grid img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+}
+</style>
 </head>
 
-<body style="text-align:center; font-family:Arial;">
+<body>
 
-  <h1>IMAGE TEST PAGE</h1>
-  <p>If the image shows below, everything is OK.</p>
+<!-- HOME -->
+<div class="section" id="home">
+  <div class="card">
+    <h1>🎂 Happy Birthday 💖</h1>
+    <p>
+      Today isn’t just another day —  
+      it’s the day you were born, and that makes it special 🤍
+    </p>
+    <a href="#l1" class="button">Open Your Letters 💌</a>
+  </div>
+</div>
 
-  <img src="img1.jpg" style="width:300px; border:3px solid red;">
+<!-- LETTER 1 -->
+<div class="section" id="l1">
+  <div class="card">
+    <h2>💌 My Clumsy Queen</h2>
+    <p>
+      Happy Birthday to my clumsy queen 👑  
+      Your little mistakes and soft smile make you perfect to me.
+    </p>
+    <div class="photo-grid">
+      <img src="img0.jpg">
+      <img src="img1.jpg">
+      <img src="img2.jpg">
+    </div>
+    <a href="#l2" class="button">Next ➜</a>
+  </div>
+</div>
+
+<!-- LETTER 2 -->
+<div class="section" id="l2">
+  <div class="card">
+    <h2>💌 Us</h2>
+    <p>
+      Some moments don’t need anything special — just you 🤍
+    </p>
+    <div class="photo-grid">
+      <img src="img3.jpg">
+      <img src="img4.jpg">
+      <img src="img5.jpg">
+    </div>
+    <a href="#l3" class="button">Next ➜</a>
+  </div>
+</div>
+
+<!-- LETTER 3 -->
+<div class="section" id="l3">
+  <div class="card">
+    <h2>💌 Her Strength</h2>
+    <p>
+      Strong, graceful, and inspiring — that’s you 🤍
+    </p>
+    <div class="photo-grid">
+      <img src="img6.jpg">
+      <img src="img7.jpg">
+      <img src="img8.jpg">
+    </div>
+    <a href="#l4" class="button">Next ➜</a>
+  </div>
+</div>
+
+<!-- LETTER 4 -->
+<div class="section" id="l4">
+  <div class="card">
+    <h2>💌 Always You</h2>
+    <p>
+      You will always be my favourite —  
+      in every version of tomorrow 💫
+    </p>
+    <div class="photo-grid">
+      <img src="img9.jpg">
+      <img src="img10.jpg">
+      <img src="img11.jpg">
+    </div>
+    <a href="#home" class="button">Read Again ♡</a>
+  </div>
+</div>
 
 </body>
 </html>
- 
