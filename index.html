@@ -60,12 +60,30 @@ p{
 }
 
 /* LETTERS */
+./* LETTERS */
 .letter{
   background:white;
   border-radius:15px;
   padding:25px;
   box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  width:100%;
+  max-width:520px;
 }
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:12px;
+  margin-top:15px;
+}
+
+.photo-grid img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+}
+
   .photo-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
