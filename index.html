@@ -89,6 +89,14 @@ p{
   display:block;
   border-radius:12px;
 }
+  .section{
+  display:none;
+}
+
+/* Only show active section */
+.section.active{
+  display:flex;
+}
 </style>
 </head>
 <div class="heart" style="left:10%">💖</div>
@@ -125,12 +133,14 @@ style="
       Today isn’t just another day —  
       it’s the day you were born, and that makes it special 🤍
     </p>
-    <a href="#l1" class="button">Open Your Letters 💌</a>
+    <button class="button" onclick="showSection('l1')">
+  Open Your Letters 💌
+</button>
   </div>
 </div>
 
 <!-- LETTER 1 -->
-<div class="section" id="l1">
+<div class="section active" id="l1">
   <div class="card">
     <h2>💌 My Clumsy Queen</h2>
     <p>
@@ -143,7 +153,10 @@ I’m grateful for you today and always.
       <img src="img1.jpeg">
       <img src="img2.jpeg">
     </div>
-    <a href="#l2" class="button">Next ➜</a>
+    <button class="button" onclick="showSection('l2')">
+  Next ➜
+</button>
+
   </div>
 </div>
 
@@ -160,7 +173,9 @@ Being with you feels like home 🤍
       <img src="img7.jpeg">
       <img src="img5.jpeg">
     </div>
-    <a href="#l3" class="button">Next ➜</a>
+  <button class="button" onclick="showSection('l3')">
+  Next ➜
+</button>
   </div>
 </div>
 
@@ -176,7 +191,9 @@ Being with you feels like home 🤍
       <img src="img5.jpeg">
       <img src="img8.jpeg">
     </div>
-    <a href="#l4" class="button">Next ➜</a>
+   <button class="button" onclick="showSection('l4')">
+  Next ➜
+</button>
   </div>
 </div>
 
@@ -193,9 +210,19 @@ Being with you feels like home 🤍
       <img src="img10.jpeg">
       <img src="img11.jpeg">
     </div>
-    <a href="#home" class="button">Read Again ♡</a>
+    <button class="button" onclick="showSection('home')">
+  Read Again ♡
+</button>
   </div>
 </div>
-
+<script>
+function showSection(id){
+  document.querySelectorAll('.section').forEach(sec=>{
+    sec.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
 </body>
 </html>
