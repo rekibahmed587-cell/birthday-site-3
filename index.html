@@ -6,6 +6,34 @@
 <title>Happy Birthday Nahidaaaaaaa 💖</title>
 
 <style>
+  .card{
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:20px;
+  animation: floatHeart 6s infinite ease-in;
+  color:#ff7aa2;
+}
+
+@keyframes floatHeart{
+  from{ transform:translateY(0); opacity:1;}
+  to{ transform:translateY(-120vh); opacity:0;}
+}
+  
 body{
   margin:0;
   font-family: Arial, sans-serif;
