@@ -126,7 +126,7 @@ style="
 </button>
   
 <!-- HOME -->
-<div class="section" id="home">
+<div class="section active" id="home">
   <div class="card">
     <h1>🎂 Happy Birthday Nahidaaaaaaaaaaaaaa💖</h1>
     <p>
@@ -221,6 +221,15 @@ function showSection(id){
     sec.classList.remove('active');
   });
   document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+  <script>
+window.onload = function(){
+  document.querySelectorAll('.section').forEach(sec=>{
+    sec.classList.remove('active');
+  });
+  document.getElementById('home').classList.add('active');
   window.scrollTo(0,0);
 }
 </script>
