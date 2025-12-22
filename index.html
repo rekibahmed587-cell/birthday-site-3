@@ -6,6 +6,58 @@
 <title>Happy Birthday Nahida 💖</title>
 
 <style>
+  /* POEM SPECIAL CARD */
+.poem-card{
+  position:relative;
+  background: linear-gradient(145deg, #fff7fb, #ffffff);
+  border-radius:22px;
+  padding:32px 26px;
+  border:1.5px solid #ffd6e5;
+  box-shadow:
+    0 15px 30px rgba(255,122,162,0.15),
+    inset 0 0 0 1px rgba(255,182,203,0.25);
+}
+
+/* Decorative border glow */
+.poem-card::after{
+  content:"";
+  position:absolute;
+  inset:6px;
+  border-radius:18px;
+  border:1px dashed rgba(255,122,162,0.35);
+  pointer-events:none;
+}
+
+/* Poem title */
+.poem-title{
+  font-size:1.4rem;
+  letter-spacing:3px;
+  color:#ff6f9c;
+  margin-bottom:18px;
+  font-weight:600;
+}
+
+/* Quotation mark */
+.poem-quote{
+  font-size:52px;
+  color:#ff9ab8;
+  line-height:0;
+  margin-bottom:10px;
+}
+
+/* Poem text */
+.poem-text{
+  font-style:italic;
+  font-size:1.05rem;
+  line-height:1.9;
+  color:#555;
+}
+
+/* Final button spacing */
+.poem-btn{
+  margin-top:28px;
+}
+
 .card{
   animation: fadeUp 1.6s cubic-bezier(.25,.46,.45,.94);
 }
@@ -187,46 +239,47 @@ body{
     </div>
 
     <button class="button" onclick="showSection('poem')">
-      One Last Thing ♡
+     A POEM FOR YOU ♡
     </button>
   </div>
 </div>
 
 <!-- POEM SECTION -->
 <div class="section" id="poem">
-  <div class="card">
-    <h2>🌸 SHE</h2>
-    <p>
-      She is strength in human form,  
-      a champion strong and true.  
-      If she could see herself through my eyes,  
-      she’d fall in love too.  
-      <br><br>
+  <div class="card poem-card">
 
-      Like autumn warm and full of hue,  
-      so quietly she stays,  
-      Coloring my silent world  
-      in soft and golden ways.  
-      <br><br>
+    <div class="poem-title">S H E</div>
+    <div class="poem-quote">❝</div>
 
-      You are the quiet I return to,  
-      the calm my thoughts run through.  
-      Between my storms and restless nights,  
-      my peace begins with you.  
-      <br><br>
+    <div class="poem-text">
+      She is strength in human form,<br>
+      a champion strong and true.<br>
+      If she could see herself through my eyes,<br>
+      she’d fall in love too.<br><br>
 
-      Some feelings don’t need words to live,  
-      they ask for nothing new—  
-      They simply stay, like autumn does,  
+      Like autumn warm and full of hue,<br>
+      so quietly she stays,<br>
+      Coloring my silent world<br>
+      in soft and golden ways.<br><br>
+
+      You are the quiet I return to,<br>
+      the calm my thoughts run through.<br>
+      Between my storms and restless nights,<br>
+      my peace begins with you.<br><br>
+
+      Some feelings don’t need words to live,<br>
+      they ask for nothing new—<br>
+      They simply stay, like autumn does,<br>
       calm, constant, and true.
-    </p>
+    </div>
 
-    <button class="button" onclick="showSection('home')">
+    <button class="button poem-btn" onclick="showSection('home')">
       Read Again ♡
     </button>
+
   </div>
 </div>
-  
+
 <script>
 function showSection(id){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
