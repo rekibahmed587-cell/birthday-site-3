@@ -6,18 +6,12 @@
 <title>Happy Birthday Nahida 💖</title>
 
 <style>
-  .card{
-  animation: fadeUp 2s cubic-bezier(.25,.46,.45,.94);
+.card{
+  animation: fadeUp 1.6s cubic-bezier(.25,.46,.45,.94);
 }
 @keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
 .heart{
@@ -27,12 +21,11 @@
   animation: floatHeart 6s infinite ease-in;
   color:#ff7aa2;
 }
-
 @keyframes floatHeart{
-  from{ transform:translateY(0); opacity:1;}
-  to{ transform:translateY(-120vh); opacity:0;}
+  from{transform:translateY(0);opacity:1;}
+  to{transform:translateY(-120vh);opacity:0;}
 }
-  
+
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -43,10 +36,14 @@ body{
 
 .section{
   min-height:100vh;
-  display:flex;
+  display:none;
   justify-content:center;
   align-items:center;
   padding:30px;
+}
+
+.section.active{
+  display:flex;
 }
 
 .card{
@@ -58,14 +55,6 @@ body{
   box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
-h1{ font-size:2.2rem; }
-h2{ margin-bottom:10px; }
-
-p{
-  font-size:1rem;
-  line-height:1.6;
-}
-
 .button{
   display:inline-block;
   margin-top:20px;
@@ -74,6 +63,8 @@ p{
   color:white;
   border-radius:25px;
   text-decoration:none;
+  border:none;
+  cursor:pointer;
 }
 
 .photo-grid{
@@ -85,90 +76,61 @@ p{
 
 .photo-grid img{
   width:100%;
-  height:auto;
-  display:block;
   border-radius:12px;
-}
-  .section{
-  display:none;
-}
-
-/* Only show active section */
-.section.active{
-  display:flex;
 }
 </style>
 </head>
+
+<body>
+
 <div class="heart" style="left:10%">💖</div>
 <div class="heart" style="left:30%">💗</div>
 <div class="heart" style="left:50%">💓</div>
 <div class="heart" style="left:70%">💞</div>
 <div class="heart" style="left:90%">💕</div>
-<body>
+
 <audio id="bgm" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button class="button"
-onclick="
-  const m = document.getElementById('bgm');
-  m.play();
+<button class="button" onclick="
+  document.getElementById('bgm').play();
   this.style.display='none';
 ">
 🎵 Tap to Play Music
 </button>
-<button onclick="document.getElementById('bgm').play()" 
-style="
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  padding:12px 16px;
-  border:none;
-  border-radius:50%;
-  background:#ff7aa2;
-  color:white;
-  font-size:18px;
-  cursor:pointer;
-">
-🎵
-</button>
-  
+
 <!-- HOME -->
 <div class="section active" id="home">
   <div class="card">
-    <h1>🎂 Happy Birthday Nahida💖</h1>
+    <h1>🎂 Happy Birthday Nahida 💖</h1>
     <p>
-      Today is a little special…
-because it’s the day you came into this world.
-        This isn’t just a page —
-         it’s a few feelings,
-           written softly,
-      only for you 🤍🤍🤍🤍🤍
+      Today is a little special…<br>
+      because it’s the day you came into this world.<br>
+      This isn’t just a page — it’s a few feelings,<br>
+      written softly, only for you 🤍
     </p>
     <button class="button" onclick="showSection('l1')">
-  Open Your Letters 💌
-</button>
+      Open Your Letters 💌
+    </button>
   </div>
 </div>
 
 <!-- LETTER 1 -->
-<div class="section active" id="l1">
+<div class="section" id="l1">
   <div class="card">
     <h2>💌 My Clumsy Queen</h2>
     <p>
-     Happy Birthday to the girl who turns ordinary moments into memories.
-Your clumsy steps, your shy smile, and your pure heart are my favourite things.
-I’m grateful for you today and always. 
+      Happy Birthday to the girl who turns ordinary moments into memories.
+      Your clumsy steps, your shy smile, and your pure heart are my favourite things.
+      I’m grateful for you today and always.
     </p>
     <div class="photo-grid">
       <img src="img0.jpeg">
       <img src="img1.jpeg">
       <img src="img2.jpeg">
     </div>
-    <button class="button" onclick="showSection('l2')">
-  Next ➜
-</button>
-
+    <button class="button" onclick="showSection('l2')">Next ➜</button>
   </div>
 </div>
 
@@ -178,16 +140,14 @@ I’m grateful for you today and always.
     <h2>💌 WE</h2>
     <p>
       You bring peace into my chaos and warmth into my days.
-Being with you feels like home 🤍
+      Being with you feels like home 🤍
     </p>
     <div class="photo-grid">
       <img src="img3.jpeg">
       <img src="img7.jpeg">
       <img src="img5.jpeg">
     </div>
-  <button class="button" onclick="showSection('l3')">
-  Next ➜
-</button>
+    <button class="button" onclick="showSection('l3')">Next ➜</button>
   </div>
 </div>
 
@@ -197,81 +157,56 @@ Being with you feels like home 🤍
     <h2>💌 Her Strength</h2>
     <p>
       There’s a quiet strength in you that inspires me.
-The way you face life with grace and honesty makes you incredibly special.
-You don’t even realise how amazing you are.No matter how far you go or how much you grow,
-remember that you are loved, admired, and never alone🤍
+      No matter how far you go, remember you are loved, admired, and never alone 🤍
     </p>
     <div class="photo-grid">
       <img src="img6.jpeg">
       <img src="img5.jpeg">
       <img src="img8.jpeg">
     </div>
-   <button class="button" onclick="showSection('l4')">
-  Next ➜
-</button>
+    <button class="button" onclick="showSection('l4')">Next ➜</button>
   </div>
 </div>
 
-<!-- LETTER 4 -->
+<!-- LETTER 4 + POEM -->
 <div class="section" id="l4">
   <div class="card">
     <h2>💌 Always You</h2>
     <p>
-      Happy Birthday 🤍
-Some people become memories,
-but you became a feeling I want to keep forever.
-In every version of life, in every season,
-I would still choose you.
-You are my favourite, always 💫💫
+      Some people become memories, but you became a feeling I want to keep forever.
+      In every version of life, I would still choose you.
     </p>
+
     <div class="photo-grid">
       <img src="img9.jpeg">
       <img src="img10.jpeg">
       <img src="img11.jpeg">
     </div>
-    <!-- POEM FOR HER  -->
-<div class="section" id="l4">
-  <div class="card">
+
+    <hr style="margin:20px 0; opacity:.3;">
+
     <h2>SHE</h2>
     <p>
-      She is strength in human form,
-      a champion strong and true, 
-      If she could see herself through my eyes, 
-      she’d fall in love...Too...
-      
-      Like autumn warm and full of hue,  so quietly she stays,
-      Coloring my silent world in soft and golden ways.
-      You are the quiet I return to, the calm my thoughts run through,
-      Between my storms and restless nights, my peace begins with you. 
-      
-      Some feelings don’t need words to live, 
-      they ask for nothing new— They simply stay,
-      like autumn does, calm, constant, and true.
+      She is strength in human form, a champion strong and true.
+      If she could see herself through my eyes, she’d fall in love too.
+      Between my storms and restless nights, my peace begins with you.
     </p>
-    <div class="photo-grid">
-    </div>
+
     <button class="button" onclick="showSection('home')">
-  Read Again ♡
-</button>
+      Read Again ♡
+    </button>
   </div>
 </div>
+
 <script>
 function showSection(id){
-  document.querySelectorAll('.section').forEach(sec=>{
-    sec.classList.remove('active');
-  });
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo(0,0);
 }
+
+window.onload = () => showSection('home');
 </script>
-  <script>
-window.onload = function(){
-  document.querySelectorAll('.section').forEach(sec=>{
-    sec.classList.remove('active');
-  });
-  document.getElementById('home').classList.add('active');
-  window.scrollTo(0,0);
-}
-</script>
+
 </body>
 </html>
