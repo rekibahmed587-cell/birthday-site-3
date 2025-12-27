@@ -171,6 +171,51 @@ body{
   border: 1.5px solid rgba(120, 90, 60, 0.35);
   box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
+/* VINTAGE LETTER STYLE */
+.letter-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #2a2a2a, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-wrapper {
+  max-width: 780px;
+  background: #f8f1e6;
+  padding: 60px;
+  border: 14px solid transparent;
+  border-image: url("https://i.imgur.com/4M7IWwP.png") 30 round;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+  color: #3a2e2a;
+  font-family: 'Georgia', serif;
+  line-height: 1.9;
+  animation: letterFade 1.8s ease;
+}
+
+.letter-wrapper p {
+  margin-bottom: 22px;
+  font-size: 18px;
+}
+
+.letter-end {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+
+@keyframes letterFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 </style>
 </head>
@@ -331,6 +376,93 @@ function showSection(id){
 
 window.onload = () => showSection('home');
 </script>
+<!-- VINTAGE LETTER SECTION -->
+<section class="letter-section" id="letter">
+
+  <div class="letter-wrapper">
+
+    <p>So its 28 Dec,<br>
+    it’s your birthday. If u see this probably i wrote it earlier.
+    Because i have to put this into the code which i made for you.
+    I told you nah ki mai ek website bana raha hu.
+    And guess what wo tumhare lie hi bana raha tha.</p>
+
+    <p>
+    But for now leave that thing because its your birthday today.
+    And i dont know ki mei kese isko special banau.
+    I want to write this in paper, you know the real letter.
+    But time kaam hai.
+    And postel ke through jane se time pe nhi pohoch payega.
+    So i did the simple one.
+    The easy one to convey my message to you.
+    </p>
+
+    <p><strong>So nahida….</strong></p>
+
+    <p>
+    You are special <br>
+    You know why??? <br>
+    Ill tell you
+    </p>
+
+    <p>
+    Bcoz the way you handle all the situation. It makes you special. <br>
+    The way you laugh. It makes you special <br>
+    The way you take the pressure. It makes you special <br>
+    The kindness between you makes you special. <br>
+    The way you support me makes you special.
+    </p>
+
+    <p>
+    And there is many things i want to tell you ki why you are special.
+    But i feel shy.
+    I feel anxious to tell you.
+    But i promise one day i gather all my courage and tell you everything.
+    Everything i feel about.
+    </p>
+
+    <p>
+    But for now enjoy the day because its your day.
+    And i hope i bring smile on your face.
+    And na plz humesha hasti raha karo.
+    Sundar lagti ho.
+    </p>
+
+    <p>
+    I want to see you successful. <br>
+    I want to see you happy.
+    </p>
+
+    <p>
+    I hope this coming year will be your best year.
+    And ill do everything to make you happy.
+    </p>
+
+    <p>
+    My words will not going to be end.
+    And like this if i write it will turn into a book. Haha
+    </p>
+
+    <p>
+    Sorry if i ever bother you.
+    And make you cry.
+    Hope you will forgive me.
+    </p>
+
+    <p>
+    Lastly i want to say that wish you a very happy birthday Nahida.
+    Keep smiling.
+    Im always with you.
+    In your worst to your best.
+    Always you find me beside you.
+    </p>
+
+    <p class="letter-end">
+      Happpppppyyyyyyyy Birthdaayyyyyyyyyyy.
+    </p>
+
+  </div>
+</section>
 
 </body>
 </html>
