@@ -111,14 +111,15 @@ body{
   justify-content:center;
   align-items:center;
   padding:30px;
-
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(6px);
+}#home{
+  min-height:75vh;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 170, 200, 0.35),
+    rgba(255, 255, 255, 0.15)
+  );
 }
 
-.section.active{
-  display:flex;
-}
 
 .card{
   background: rgba(255,255,255,0.9);
@@ -240,6 +241,19 @@ body{
   color: #666;
   line-height: 1.7;
   margin-bottom: 25px;
+}
+/* MAKE HOME PAGE SHORTER & SOFTER */
+#home {
+  min-height: 75vh;        /* not full screen */
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 170, 200, 0.35),
+    rgba(255, 255, 255, 0.15)
+  );
+}
+
+#home .card {
+  padding: 26px;
 }
 
 </style>
