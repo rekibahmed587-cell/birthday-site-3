@@ -242,14 +242,25 @@ body{
   line-height: 1.7;
   margin-bottom: 25px;
 }
-/* MAKE HOME PAGE SHORTER & SOFTER */
+/* HOME LOOK */
 #home {
-  min-height: 75vh;        /* not full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* makes it not tall */
+  padding-bottom: 80px;
   background: radial-gradient(
     circle at center,
-    rgba(255, 170, 200, 0.35),
+    rgba(255, 170, 200, 0.25),
     rgba(255, 255, 255, 0.15)
   );
+}
+
+/* Make home card slightly lifted */
+#home .card {
+  margin-top: auto;
+  margin-bottom: auto;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
 }
 
 #home .card {
