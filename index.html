@@ -172,14 +172,7 @@ body{
   box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 /* VINTAGE LETTER STYLE */
-.letter-section {
-  min-height: 100vh;
-  padding: 80px 20px;
-  background: radial-gradient(circle at top, #2a2a2a, #000);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .letter-wrapper {
   max-width: 780px;
@@ -360,9 +353,13 @@ body{
       calm, constant, and true.
     </div>
 
-    <button class="button poem-btn" onclick="showSection('home')">
-      Read Again ♡
-    </button>
+  <button class="button poem-btn" onclick="showSection('poem')">
+  Read Again ♡
+</button>
+
+<button class="button poem-btn" onclick="showSection('letter')">
+  Read my letter 💌
+</button>
 
   </div>
 </div>
@@ -376,9 +373,9 @@ function showSection(id){
 
 window.onload = () => showSection('home');
 </script>
-<!-- VINTAGE LETTER SECTION -->
-<section class="letter-section" id="letter">
 
+<!-- LETTER SECTION -->
+<div class="section" id="letter">
   <div class="letter-wrapper">
 
     <p>So its 28 Dec,<br>
@@ -461,8 +458,12 @@ window.onload = () => showSection('home');
       Happpppppyyyyyyyy Birthdaayyyyyyyyyyy.
     </p>
 
+    <button class="button" onclick="showSection('home')">
+      Back to Start ♡
+    </button>
+
   </div>
-</section>
+</div>
 
 </body>
 </html>
