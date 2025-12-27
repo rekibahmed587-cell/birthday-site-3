@@ -6,66 +6,23 @@
 <title>Happy Birthday Nahida 💖</title>
 
 <style>
-  /* POEM SPECIAL CARD */
-.poem-card{
-  position:relative;
-  background: linear-gradient(145deg, #fff7fb, #ffffff);
-  border-radius:22px;
-  padding:32px 26px;
-  border:1.5px solid #ffd6e5;
-  box-shadow:
-    0 15px 30px rgba(255,122,162,0.15),
-    inset 0 0 0 1px rgba(255,182,203,0.25);
+/* BASIC RESET */
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  text-align:center;
+  color:#333;
+  background: linear-gradient(120deg,#ffe4ec,#fff1f5,#fdecef,#ffeef4);
+  background-size:300% 300%;
+  animation:bgMove 18s ease infinite;
+}
+@keyframes bgMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
-/* Decorative border glow */
-.poem-card::after{
-  content:"";
-  position:absolute;
-  inset:6px;
-  border-radius:18px;
-  border:1px dashed rgba(255,122,162,0.35);
-  pointer-events:none;
-}
-
-/* Poem title */
-.poem-title{
-  font-size:1.4rem;
-  letter-spacing:3px;
-  color:#ff6f9c;
-  margin-bottom:18px;
-  font-weight:600;
-}
-
-/* Quotation mark */
-.poem-quote{
-  font-size:52px;
-  color:#ff9ab8;
-  line-height:0;
-  margin-bottom:10px;
-}
-
-/* Poem text */
-.poem-text{
-  font-style:italic;
-  font-size:1.05rem;
-  line-height:1.9;
-  color:#555;
-}
-
-/* Final button spacing */
-.poem-btn{
-  margin-top:28px;
-}
-
-.card{
-  animation: fadeUp 1.6s cubic-bezier(.25,.46,.45,.94);
-}
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
+/* FLOATING HEARTS */
 .heart{
   position:fixed;
   bottom:-20px;
@@ -78,31 +35,7 @@
   to{transform:translateY(-120vh);opacity:0;}
 }
 
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  text-align:center;
-  color:#333;
-
-  background: linear-gradient(
-    120deg,
-    #ffe4ec,
-    #fff1f5,
-    #fdecef,
-    #ffeef4
-  );
-  background-size: 300% 300%;
-  animation: bgMove 18s ease infinite;
-}
-
-@keyframes bgMove{
-  0%{ background-position:0% 50%; }
-  50%{ background-position:100% 50%; }
-  100%{ background-position:0% 50%; }
-}
-
-}
-
+/* SECTION SYSTEM (IMPORTANT) */
 .section{
   min-height:100vh;
   display:none;
@@ -110,118 +43,87 @@ body{
   align-items:center;
   padding:30px;
 }
-
 .section.active{
   display:flex;
   flex-direction:column;
 }
 
-#home .card {
-  padding: 26px;
-}
-
-
+/* CARD */
 .card{
   background: rgba(255,255,255,0.9);
   width:100%;
   max-width:520px;
   border-radius:22px;
   padding:28px;
-  box-shadow:
-    0 18px 35px rgba(0,0,0,0.12),
-    0 0 0 1px rgba(255,122,162,0.15);
+  box-shadow:0 18px 35px rgba(0,0,0,0.12);
+  animation: fadeUp 1.2s ease;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
+/* BUTTON */
 .button{
-  display:inline-block;
   margin-top:20px;
   padding:12px 26px;
   background:#ff7aa2;
   color:white;
   border-radius:25px;
-  text-decoration:none;
   border:none;
   cursor:pointer;
 }
 
+/* PHOTO GRID */
 .photo-grid{
   display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:12px;
   margin-top:15px;
 }
-
 .photo-grid img{
   width:100%;
   border-radius:12px;
 }
-  /* POEM SECTION BACKGROUND */
+
+/* POEM */
 #poem{
-  background-image: url("poem-bg.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image:url("poem-bg.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+.poem-card{
+  background:rgba(255,255,255,0.85);
+}
+.poem-title{
+  letter-spacing:3px;
+  color:#ff6f9c;
+  font-weight:600;
+  margin-bottom:10px;
+}
+.poem-text{
+  font-style:italic;
+  line-height:1.8;
 }
 
-/* Make poem card blend nicely */
-#poem .card{
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(2px);
+/* FINAL LETTER */
+.letter-wrapper{
+  max-width:780px;
+  background:#f8f1e6;
+  padding:60px;
+  border:14px solid transparent;
+  border-image:url("https://i.imgur.com/4M7IWwP.png") 30 round;
+  font-family:Georgia, serif;
+  line-height:1.9;
 }
-#poem .card{
-  border: 1.5px solid rgba(120, 90, 60, 0.35);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+.letter-wrapper p{
+  font-size:18px;
+  margin-bottom:20px;
 }
-/* VINTAGE LETTER STYLE */
-
-
-.letter-wrapper {
-  max-width: 780px;
-  background: #f8f1e6;
-  padding: 60px;
-  border: 14px solid transparent;
-  border-image: url("https://i.imgur.com/4M7IWwP.png") 30 round;
-  box-shadow: 0 25px 70px rgba(0,0,0,0.6);
-  color: #3a2e2a;
-  font-family: 'Georgia', serif;
-  line-height: 1.9;
-  animation: letterFade 1.8s ease;
+.letter-end{
+  font-size:22px;
+  margin-top:40px;
 }
-
-.letter-wrapper p {
-  margin-bottom: 22px;
-  font-size: 18px;
-}
-
-.letter-end {
-  text-align: center;
-  font-size: 22px;
-  letter-spacing: 2px;
-  margin-top: 40px;
-}
-
-@keyframes letterFade {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Make home card slightly lifted */
-#home .card {
-  margin-top: auto;
-  margin-bottom: auto;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
-}
-
-#home .card {
-  padding: 26px;
-}
-
 </style>
 </head>
 
@@ -233,14 +135,11 @@ body{
 <div class="heart" style="left:70%">💞</div>
 <div class="heart" style="left:90%">💕</div>
 
+<!-- MUSIC -->
 <audio id="bgm" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
-
-<button class="button" onclick="
-  document.getElementById('bgm').play();
-  this.style.display='none';
-">
+<button class="button" onclick="document.getElementById('bgm').play();this.style.display='none';">
 🎵 Tap to Play Music
 </button>
 
@@ -260,20 +159,13 @@ body{
   </div>
 </div>
 
-
 <!-- LETTER 1 -->
 <div class="section" id="l1">
   <div class="card">
     <h2>💌 My Clumsy Queen</h2>
-    <p>
-      Happy Birthday to the girl who turns ordinary moments into memories.
-      Your clumsy steps, your shy smile, and your pure heart are my favourite things.
-      I’m grateful for you today and always.
-    </p>
+    <p>Happy Birthday to the girl who turns ordinary moments into memories.</p>
     <div class="photo-grid">
-      <img src="img0.jpeg">
-      <img src="img1.jpeg">
-      <img src="img2.jpeg">
+      <img src="img0.jpeg"><img src="img1.jpeg"><img src="img2.jpeg">
     </div>
     <button class="button" onclick="showSection('l2')">Next ➜</button>
   </div>
@@ -283,14 +175,9 @@ body{
 <div class="section" id="l2">
   <div class="card">
     <h2>💌 WE</h2>
-    <p>
-      You bring peace into my chaos and warmth into my days.
-      Being with you feels like home 🤍
-    </p>
+    <p>You bring peace into my chaos and warmth into my days.</p>
     <div class="photo-grid">
-      <img src="img3.jpeg">
-      <img src="img7.jpeg">
-      <img src="img5.jpeg">
+      <img src="img3.jpeg"><img src="img7.jpeg"><img src="img5.jpeg">
     </div>
     <button class="button" onclick="showSection('l3')">Next ➜</button>
   </div>
@@ -300,171 +187,57 @@ body{
 <div class="section" id="l3">
   <div class="card">
     <h2>💌 Her Strength</h2>
-    <p>
-      There’s a quiet strength in you that inspires me.
-      No matter how far you go, remember you are loved, admired, and never alone 🤍
-    </p>
+    <p>There’s a quiet strength in you that inspires me.</p>
     <div class="photo-grid">
-      <img src="img6.jpeg">
-      <img src="img5.jpeg">
-      <img src="img8.jpeg">
+      <img src="img6.jpeg"><img src="img5.jpeg"><img src="img8.jpeg">
     </div>
     <button class="button" onclick="showSection('l4')">Next ➜</button>
   </div>
 </div>
+
 <!-- LETTER 4 -->
 <div class="section" id="l4">
   <div class="card">
     <h2>💌 Always You</h2>
-    <p>
-      Happy Birthday 🤍  
-      Some people become memories,  
-      but you became a feeling I want to keep forever.  
-      In every version of life, in every season,  
-      I would still choose you.  
-      You are my favourite, always 💫
-    </p>
-
+    <p>You are my favourite, always 💫</p>
     <div class="photo-grid">
-      <img src="img9.jpeg">
-      <img src="img10.jpeg">
-      <img src="img11.jpeg">
+      <img src="img9.jpeg"><img src="img10.jpeg"><img src="img11.jpeg">
     </div>
-
     <button class="button" onclick="showSection('poem')">
-     A POEM FOR YOU ♡
+      A Poem For You ♡
     </button>
   </div>
 </div>
 
-<!-- POEM SECTION -->
+<!-- POEM -->
 <div class="section" id="poem">
   <div class="card poem-card">
-
     <div class="poem-title">S H E</div>
-    <div class="poem-quote">❝</div>
-
     <div class="poem-text">
       She is strength in human form,<br>
       a champion strong and true.<br>
       If she could see herself through my eyes,<br>
-      she’d fall in love too.<br><br>
-
-      Like autumn warm and full of hue,<br>
-      so quietly she stays,<br>
-      Coloring my silent world<br>
-      in soft and golden ways.<br><br>
-
-      You are the quiet I return to,<br>
-      the calm my thoughts run through.<br>
-      Between my storms and restless nights,<br>
-      my peace begins with you.<br><br>
-
-      Some feelings don’t need words to live,<br>
-      they ask for nothing new—<br>
-      They simply stay, like autumn does,<br>
-      calm, constant, and true.
+      she’d fall in love too.
     </div>
-
-  <button class="button poem-btn" onclick="showSection('poem')">
-  Read Again ♡
-</button>
-
-<button class="button poem-btn" onclick="showSection('letter')">
-  Read my letter 💌
-</button>
-
+    <button class="button" onclick="showSection('letter')">
+      Read my letter 💌
+    </button>
   </div>
 </div>
 
-<script>
-function showSection(id){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo(0,0);
-}
-
-window.onload = () => showSection('home');
-</script>
-
-<!-- LETTER SECTION -->
+<!-- FINAL LETTER -->
 <div class="section" id="letter">
   <div class="letter-wrapper">
 
-    <p>So its 28 Dec,<br>
-    it’s your birthday. If u see this probably i wrote it earlier.
-    Because i have to put this into the code which i made for you.
-    I told you nah ki mai ek website bana raha hu.
-    And guess what wo tumhare lie hi bana raha tha.</p>
-
+    <p>So its 28 Dec, it’s your birthday...</p>
     <p>
-    But for now leave that thing because its your birthday today.
-    And i dont know ki mei kese isko special banau.
-    I want to write this in paper, you know the real letter.
-    But time kaam hai.
-    And postel ke through jane se time pe nhi pohoch payega.
-    So i did the simple one.
-    The easy one to convey my message to you.
+      You are special — in the way you laugh,  
+      in the way you stay strong,  
+      in the way you support me.
     </p>
-
-    <p><strong>So nahida….</strong></p>
-
     <p>
-    You are special <br>
-    You know why??? <br>
-    Ill tell you
-    </p>
-
-    <p>
-    Bcoz the way you handle all the situation. It makes you special. <br>
-    The way you laugh. It makes you special <br>
-    The way you take the pressure. It makes you special <br>
-    The kindness between you makes you special. <br>
-    The way you support me makes you special.
-    </p>
-
-    <p>
-    And there is many things i want to tell you ki why you are special.
-    But i feel shy.
-    I feel anxious to tell you.
-    But i promise one day i gather all my courage and tell you everything.
-    Everything i feel about.
-    </p>
-
-    <p>
-    But for now enjoy the day because its your day.
-    And i hope i bring smile on your face.
-    And na plz humesha hasti raha karo.
-    Sundar lagti ho.
-    </p>
-
-    <p>
-    I want to see you successful. <br>
-    I want to see you happy.
-    </p>
-
-    <p>
-    I hope this coming year will be your best year.
-    And ill do everything to make you happy.
-    </p>
-
-    <p>
-    My words will not going to be end.
-    And like this if i write it will turn into a book. Haha
-    </p>
-
-    <p>
-    Sorry if i ever bother you.
-    And make you cry.
-    Hope you will forgive me.
-    </p>
-
-    <p>
-    Lastly i want to say that wish you a very happy birthday Nahida.
-    Keep smiling.
-    Im always with you.
-    In your worst to your best.
-    Always you find me beside you.
+      I want to see you successful.  
+      I want to see you happy.
     </p>
 
     <p class="letter-end">
@@ -477,6 +250,15 @@ window.onload = () => showSection('home');
 
   </div>
 </div>
+
+<script>
+function showSection(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+window.onload = () => showSection('home');
+</script>
 
 </body>
 </html>
